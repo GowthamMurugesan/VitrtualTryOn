@@ -1,0 +1,14 @@
+FROM python:2.7
+
+WORKDIR /usr/src/app
+
+COPY /project/radiology/ANSIR_lab/s424927/SmartFit/human_parsing/
+COPY /project/radiology/ANSIR_lab/s424927/SmartFit/pose_estimation/
+COPY /project/radiology/ANSIR_lab/s424927/SmartFit/try-on/
+COPY /project/radiology/ANSIR_lab/s424927/SmartFit/inputs/
+COPY /project/radiology/ANSIR_lab/s424927/SmartFit/run_smartfit.sh
+COPY /project/radiology/ANSIR_lab/s424927/SmartFit/requirements.txt
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+CMD [./run_smartfit.sh "${input_person}" "{input_cloth}"]

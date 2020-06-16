@@ -1,4 +1,4 @@
-# [VITON](https://docs.google.com/presentation/d/146ZfU9597FB8AG4J9jFxlkXjaEJga5XEbI_EbsG0Jxw/present#slide=id.gc6f80d1ff_0_0)
+# [SmartFit](https://docs.google.com/presentation/d/146ZfU9597FB8AG4J9jFxlkXjaEJga5XEbI_EbsG0Jxw/present#slide=id.gc6f80d1ff_0_0)
 ### A virtual fitting room service for e-commerce!
 
 <p float="left">
@@ -28,13 +28,14 @@ This repository is for demo purposes only and runs a publicly available clothing
 
 First clone the repository:
 ```
-cd VirtualTryOn
+git clone https://github.com/RohanBhandari/SmartFit.git
+cd SmartFit
 ```
 
 Next, run `source setup.sh`, which will create a conda environment and install the required packages via
 ```
-conda create --name viton python=2.7 pip
-source activate viton
+conda create --name smartfit python=2.7 pip
+source activate smartfit
 pip install -r requirements.txt
 ```
 Additionally, `setup.sh` will clone and setup auxiliary repositories that do the [human parsing](https://github.com/RohanBhandari/LIP_JPPNet.git), [pose estimation](https://github.com/RohanBhandari/keras_Realtime_Multi-Person_Pose_Estimation), and [clothing transfer](https://github.com/RohanBhandari/VITON/tree/f8427292e653df9ecb09a1413cfc4e0575a34469) steps. This process will download pre-trained models for each of the tasks.
